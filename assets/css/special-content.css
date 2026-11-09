@@ -1,0 +1,138 @@
+/**
+ * Special Content Section widget styles.
+ *
+ * @package Yadakshop
+ */
+
+.yadakshop-special-content {
+	width: 100%;
+}
+
+.yadakshop-special-content__inner {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	position: relative;
+}
+
+/* Image side */
+.yadakshop-special-content__image-side {
+	width: 100%;
+	max-width: 840px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.yadakshop-special-content__image-side img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* Headings */
+.yadakshop-special-content__heading--mobile {
+	display: none;
+	width: 100%;
+	text-align: center;
+}
+
+.yadakshop-special-content__heading--mobile .yadakshop-special-content__title {
+	display: inline-block;
+}
+
+.yadakshop-special-content__heading--desktop {
+	padding-bottom: 24px;
+	text-align: right;
+}
+
+.yadakshop-special-content__title {
+	position: relative;
+	margin: 0;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.4;
+	color: #0a0a0a;
+}
+
+.yadakshop-special-content__heading--desktop .yadakshop-special-content__title::after {
+	content: "";
+	position: absolute;
+	width: 96px;
+	height: 1px;
+	background: linear-gradient(90deg, rgba(255, 112, 32, 0) 0%, rgb(150, 0, 22) 100%);
+	right: 0;
+	bottom: -8px;
+}
+
+/* Content box – desktop */
+.yadakshop-special-content__content-side {
+	position: absolute;
+	right: 80px;
+	bottom: -1px;
+	width: 100%;
+	max-width: 633px;
+	background-color: #ffffff;
+}
+
+.yadakshop-special-content__content {
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: justify;
+}
+
+.yadakshop-special-content__content p {
+	margin: 0;
+}
+
+.yadakshop-special-content__content p + p {
+	margin-top: 1em;
+}
+
+/* Tablet and below (max-width: 1080px) */
+@media (max-width: 1080px) {
+	.yadakshop-special-content__inner {
+		flex-wrap: wrap;
+	}
+
+	.yadakshop-special-content__image-side {
+		max-width: 100%;
+	}
+
+	.yadakshop-special-content__image-side img {
+		aspect-ratio: 16 / 9;
+	}
+
+	.yadakshop-special-content__heading--mobile {
+		display: block;
+		margin-bottom: 2.6em;
+	}
+
+	.yadakshop-special-content__heading--mobile .yadakshop-special-content__title::after {
+		content: "";
+		position: absolute;
+		width: 96px;
+		height: 1px;
+		background: linear-gradient(90deg, rgba(255, 112, 32, 0) 0%, rgb(150, 0, 22) 100%);
+		right: 50%;
+		transform: translateX(50%);
+		bottom: -8px;
+	}
+
+	.yadakshop-special-content__heading--desktop {
+		display: none;
+	}
+
+	.yadakshop-special-content__content-side {
+		position: static;
+		max-width: 100%;
+		background-color: transparent;
+		border-radius: 0 !important;
+		box-shadow: none;
+	}
+}

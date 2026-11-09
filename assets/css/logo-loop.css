@@ -1,0 +1,179 @@
+/**
+ * Logo Loop widget styles.
+ *
+ * Based on React Bits Logo Loop – https://reactbits.dev/animations/logo-loop
+ *
+ * @package Yadakshop
+ */
+
+.yadakshop-logo-loop {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	--yadakshop-logoloop-gap: 32px;
+	--yadakshop-logoloop-logoHeight: 28px;
+	--yadakshop-logoloop-fadeColor: #ffffff;
+}
+
+.yadakshop-logo-loop--vertical {
+	height: 100%;
+	display: inline-block;
+}
+
+.yadakshop-logo-loop--scale-hover {
+	padding-top: calc(var(--yadakshop-logoloop-logoHeight) * 0.1);
+	padding-bottom: calc(var(--yadakshop-logoloop-logoHeight) * 0.1);
+}
+
+.yadakshop-logo-loop__track {
+	display: flex;
+	width: max-content;
+	will-change: transform;
+	user-select: none;
+	position: relative;
+	z-index: 0;
+}
+
+.yadakshop-logo-loop--vertical .yadakshop-logo-loop__track {
+	flex-direction: column;
+	height: max-content;
+	width: 100%;
+}
+
+.yadakshop-logo-loop__list {
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+	flex-shrink: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.yadakshop-logo-loop--vertical .yadakshop-logo-loop__list {
+	flex-direction: column;
+}
+
+.yadakshop-logo-loop__item {
+	flex: 0 0 auto;
+	margin-right: var(--yadakshop-logoloop-gap);
+	font-size: var(--yadakshop-logoloop-logoHeight);
+	line-height: 1;
+}
+
+.yadakshop-logo-loop--vertical .yadakshop-logo-loop__item {
+	margin-right: 0;
+	margin-bottom: var(--yadakshop-logoloop-gap);
+}
+
+.yadakshop-logo-loop__item:last-child {
+	margin-right: var(--yadakshop-logoloop-gap);
+}
+
+.yadakshop-logo-loop--vertical .yadakshop-logo-loop__item:last-child {
+	margin-right: 0;
+	margin-bottom: var(--yadakshop-logoloop-gap);
+}
+
+.yadakshop-logo-loop__item img {
+	height: var(--yadakshop-logoloop-logoHeight);
+	width: auto;
+	display: block;
+	object-fit: contain;
+	image-rendering: -webkit-optimize-contrast;
+	-webkit-user-drag: none;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.yadakshop-logo-loop--scale-hover .yadakshop-logo-loop__item {
+	overflow: visible;
+}
+
+.yadakshop-logo-loop--scale-hover .yadakshop-logo-loop__item:hover img {
+	transform: scale(1.2);
+	transform-origin: center center;
+}
+
+.yadakshop-logo-loop__link {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: opacity 0.2s ease;
+}
+
+.yadakshop-logo-loop__link:hover {
+	opacity: 0.8;
+}
+
+.yadakshop-logo-loop__link:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.yadakshop-logo-loop--fade::before,
+.yadakshop-logo-loop--fade::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: clamp(24px, 8%, 120px);
+	pointer-events: none;
+	z-index: 10;
+}
+
+.yadakshop-logo-loop--fade::before {
+	left: 0;
+	background: linear-gradient(
+		to right,
+		var(--yadakshop-logoloop-fadeColor) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.yadakshop-logo-loop--fade::after {
+	right: 0;
+	background: linear-gradient(
+		to left,
+		var(--yadakshop-logoloop-fadeColor) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.yadakshop-logo-loop--vertical.yadakshop-logo-loop--fade::before,
+.yadakshop-logo-loop--vertical.yadakshop-logo-loop--fade::after {
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: clamp(24px, 8%, 120px);
+}
+
+.yadakshop-logo-loop--vertical.yadakshop-logo-loop--fade::before {
+	top: 0;
+	bottom: auto;
+	background: linear-gradient(
+		to bottom,
+		var(--yadakshop-logoloop-fadeColor) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.yadakshop-logo-loop--vertical.yadakshop-logo-loop--fade::after {
+	bottom: 0;
+	top: auto;
+	background: linear-gradient(
+		to top,
+		var(--yadakshop-logoloop-fadeColor) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.yadakshop-logo-loop__track {
+		transform: translate3d(0, 0, 0) !important;
+	}
+
+	.yadakshop-logo-loop__item img {
+		transition: none !important;
+	}
+}

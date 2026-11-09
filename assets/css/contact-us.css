@@ -1,0 +1,351 @@
+/**
+ * Contact Us Elementor widget styles.
+ */
+
+.yadakshop-contact-us {
+	--tcu-radius: 16px;
+	--tcu-main: #d90202;
+	--tcu-second: #960016;
+	--tcu-border: #ededed;
+	--tcu-text: #0a0a0a;
+	--tcu-bg: #f7f7f7;
+}
+
+/* Width comes from .mainView (same as site content) */
+.yadakshop-contact-us__inner {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Header */
+.yadakshop-contact-us__header {
+	padding: 48px 24px 56px;
+	border-radius: var(--tcu-radius);
+	text-align: center;
+	background: linear-gradient(135deg, #1a9b4b 0%, #0d7a6f 50%, #0a5e7a 100%);
+}
+
+.yadakshop-contact-us__title {
+	margin: 0 0 8px;
+	font-size: 32px;
+	line-height: 1.35;
+	font-weight: 700;
+	color: #fff;
+}
+
+.yadakshop-contact-us__subtitle {
+	margin: 0;
+	font-size: 14px;
+	letter-spacing: 0.28em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+/* Cards grid */
+.yadakshop-contact-us__cards {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	margin: -1.5em 0 0;
+	transform: translateY(0);
+	z-index: 2;
+}
+
+.yadakshop-contact-us__card {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 48%;
+	min-height: 72px;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid var(--tcu-border);
+	border-radius: var(--tcu-radius);
+	transition: border-color 0.3s ease;
+}
+
+.yadakshop-contact-us__card--full {
+	width: 97.5%;
+}
+
+.yadakshop-contact-us__card:hover .yadakshop-contact-us__card-label svg {
+	color: #e83333;
+}
+
+.yadakshop-contact-us__card-label {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+	color: #000;
+	font-size: 15px;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.yadakshop-contact-us__card-label svg {
+	flex-shrink: 0;
+	color: var(--tcu-main);
+	transition: color 0.3s ease;
+}
+
+.yadakshop-contact-us__card-value {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 14px;
+	text-align: left;
+}
+
+.yadakshop-contact-us__card-value p {
+	margin: 0;
+	color: var(--tcu-text);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.yadakshop-contact-us__card-value a {
+	color: var(--tcu-text);
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	text-decoration: none !important;
+	transition: color 0.3s ease;
+}
+
+.yadakshop-contact-us__card-value a:hover {
+	color: var(--tcu-main);
+}
+
+/* Map */
+.yadakshop-contact-us__map-wrap {
+	position: relative;
+	width: 100%;
+	margin: 2em 0 0;
+	overflow: hidden;
+	border-radius: var(--tcu-radius);
+}
+
+.yadakshop-contact-us__map {
+	background: var(--tcu-bg);
+	line-height: 0;
+}
+
+.yadakshop-contact-us__map iframe {
+	display: block;
+	width: 100% !important;
+	height: 420px;
+	min-height: 280px;
+	border: 0;
+	background: var(--tcu-bg);
+}
+
+.yadakshop-contact-us__map-actions {
+	position: absolute;
+	top: 1em;
+	left: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	gap: 4px;
+	z-index: 3;
+}
+
+.yadakshop-contact-us__map-actions a {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	height: 48px;
+	padding: 0 16px;
+	border-radius: var(--tcu-radius);
+	background: #fff;
+	color: var(--tcu-text);
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: none !important;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.yadakshop-contact-us__map-actions a:hover {
+	color: var(--tcu-main);
+}
+
+.yadakshop-contact-us__map-actions a:hover svg {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.yadakshop-contact-us__map-actions svg {
+	flex-shrink: 0;
+	display: block;
+	width: 33px;
+	height: 32px;
+	transition: transform 0.3s ease;
+}
+
+/* Social */
+.yadakshop-contact-us__social {
+	padding: 24px 0;
+}
+
+.yadakshop-contact-us__social-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.yadakshop-contact-us__social-items a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	width: 100%;
+	max-width: 130px;
+	height: 44px;
+	padding: 14px;
+	border-radius: 50px;
+	background: var(--tcu-bg);
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-decoration: none !important;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.yadakshop-contact-us__social-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	color: var(--tcu-second);
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.yadakshop-contact-us__social-icon svg {
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+}
+
+.yadakshop-contact-us__social-label {
+	color: var(--tcu-text);
+	transition: color 0.3s ease;
+}
+
+.yadakshop-contact-us__social-items a:hover {
+	background: var(--tcu-second);
+}
+
+.yadakshop-contact-us__social-items a:hover .yadakshop-contact-us__social-label,
+.yadakshop-contact-us__social-items a:hover .yadakshop-contact-us__social-icon {
+	color: #fff;
+}
+
+.yadakshop-contact-us__social-items a:hover .yadakshop-contact-us__social-icon {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+	.yadakshop-contact-us__card-label {
+		font-size: 13.5px;
+	}
+
+	.yadakshop-contact-us__card-value a,
+	.yadakshop-contact-us__card-value p {
+		font-size: 13.5px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.yadakshop-contact-us__header {
+		padding: 36px 18px 44px;
+	}
+
+	.yadakshop-contact-us__title {
+		font-size: 24px;
+	}
+
+	.yadakshop-contact-us__subtitle {
+		font-size: 12px;
+		letter-spacing: 0.2em;
+	}
+
+	.yadakshop-contact-us__cards {
+		gap: 10px;
+		margin-top: -1.2em;
+	}
+
+	.yadakshop-contact-us__card,
+	.yadakshop-contact-us__card--full {
+		width: 100%;
+		min-height: 60px;
+		padding: 16px;
+	}
+
+	.yadakshop-contact-us__card-label {
+		font-size: 13px;
+	}
+
+	.yadakshop-contact-us__card-label svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.yadakshop-contact-us__card-value {
+		gap: 8px;
+	}
+
+	.yadakshop-contact-us__card-value a,
+	.yadakshop-contact-us__card-value p {
+		font-size: 13px;
+	}
+
+	.yadakshop-contact-us__map-actions {
+		left: 1em;
+		top: 0.75em;
+		flex-wrap: wrap;
+		max-width: calc(100% - 2em);
+	}
+
+	.yadakshop-contact-us__map-actions a {
+		height: 42px;
+		padding: 0 12px;
+		font-size: 14px;
+	}
+
+	.yadakshop-contact-us__map iframe {
+		min-height: 260px;
+	}
+}
+
+@media (max-width: 480px) {
+	.yadakshop-contact-us__card,
+	.yadakshop-contact-us__card--full {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.yadakshop-contact-us__card-value {
+		justify-content: flex-start;
+		text-align: right;
+		width: 100%;
+	}
+
+	.yadakshop-contact-us__card--full .yadakshop-contact-us__card-label span:last-child {
+		display: inline;
+	}
+}

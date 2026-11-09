@@ -1,0 +1,302 @@
+/**
+ * Immigration Methods widget styles.
+ *
+ * @package Yadakshop
+ */
+
+.yadakshop-immigration-methods {
+  width: 100%;
+}
+
+.yadakshop-im__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 440px) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px 8px;
+  direction: rtl;
+}
+
+@media (max-width: 1260px) {
+  .yadakshop-im__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 380px) minmax(0, 1fr);
+    gap: 10px 6px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .yadakshop-im__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.yadakshop-im__layout--no-image {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.yadakshop-im__layout--no-image .yadakshop-im__col--start {
+  grid-column: 1;
+}
+
+.yadakshop-im__layout--no-image .yadakshop-im__col--end {
+  grid-column: 2;
+}
+
+.yadakshop-im__col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  min-width: 0;
+  justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  .yadakshop-im__col {
+    width: 100%;
+    gap: 14px;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+  }
+}
+
+.yadakshop-im__col--start {
+  grid-column: 1;
+  align-items: flex-start;
+}
+
+@media (max-width: 1080px) {
+  .yadakshop-im__col--start {
+    order: 1;
+  }
+}
+
+.yadakshop-im__col--end {
+  grid-column: 3;
+  align-items: flex-end;
+}
+
+@media (max-width: 1080px) {
+  .yadakshop-im__col--end {
+    order: 3;
+  }
+}
+
+.yadakshop-im__media {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 12px 0;
+}
+
+@media (max-width: 1080px) {
+  .yadakshop-im__media {
+    order: 2;
+    width: 100%;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+.yadakshop-im__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 440px;
+  object-fit: contain;
+}
+
+.yadakshop-im__card {
+  width: 100%;
+  max-width: 304px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0px 17px 26.3px 0px #58585814;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.elementor-widget-yadakshop-immigration-methods
+  .yadakshop-im__col--start
+  .yadakshop-im__card,
+.elementor-widget-yadakshop-immigration-methods
+  .yadakshop-im__col--end
+  .yadakshop-im__card {
+  transform: translateX(var(--yadakshop-im-arc-x, 0px)) !important;
+}
+
+.elementor-widget-yadakshop-immigration-methods
+  .yadakshop-im__col--start
+  .yadakshop-im__card:hover,
+.elementor-widget-yadakshop-immigration-methods
+  .yadakshop-im__col--end
+  .yadakshop-im__card:hover {
+  transform: translateX(var(--yadakshop-im-arc-x, 0px)) translateY(-3px) !important;
+  box-shadow: 0px 16px 44.8px 1px #313f5685;
+}
+
+@media (max-width: 1080px) {
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--start
+    .yadakshop-im__card:hover,
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--end
+    .yadakshop-im__card:hover {
+    transform: none !important;
+  }
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--start
+    .yadakshop-im__card,
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--end
+    .yadakshop-im__card {
+    max-width: 100%;
+    --yadakshop-im-arc-x: 0px !important;
+    transform: none !important;
+    width: 48%;
+    padding: 0 !important;
+    border-radius: 10px;
+  }
+  .elementor-widget-yadakshop-immigration-methods .yadakshop-im__col .yadakshop-im__card:last-of-type{
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--start
+    .yadakshop-im__card,
+  .elementor-widget-yadakshop-immigration-methods
+    .yadakshop-im__col--end
+    .yadakshop-im__card {
+    width: 100%;
+  }
+}
+
+.yadakshop-im__card-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 12px 12px 12px;
+  direction: rtl;
+}
+
+@media (max-width: 768px) {
+  .yadakshop-im__card-inner {
+    padding: 14px 10px !important;
+    gap: 10px;
+  }
+}
+
+.yadakshop-im__card-content {
+  flex: 1;
+  min-width: 0;
+  text-align: right;
+}
+
+.yadakshop-im__card-title {
+  margin: 0 0 4px;
+  font-size: 18.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #000001;
+}
+
+@media (max-width: 768px) {
+  .yadakshop-im__card-title {
+    font-size: 16px;
+  }
+  .yadakshop-im__card-desc{
+    font-size: 13px !important;
+  }
+  .yadakshop-im__card-action{
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .yadakshop-im__card-action svg{
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+.yadakshop-im__card-desc {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #9d9c9c;
+}
+
+.yadakshop-im__card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #12223c;
+  color: #fff !important;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.yadakshop-im__card-action:hover {
+  transform: scale(1.04);
+  background-color: #fda311 !important;
+}
+
+.yadakshop-im__card-action:hover svg {
+  transform: rotateY(180deg) scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.yadakshop-im__card-action--static {
+  pointer-events: none;
+}
+
+.yadakshop-im__card-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  transition: all 0.4s ease;
+}
+
+.yadakshop-im__card-action-icon svg {
+  display: block;
+  width: 14px;
+  transition: all 0.4s ease;
+  height: 14px;
+}
+
+.yadakshop-im__media {
+  animation: yadakshopImGlobeFloat 7s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+  transition: all 0.4s ease;
+}
+
+.yadakshop-im__media img {
+  animation: yadakshopImGlobeRotate 12s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@keyframes yadakshopImGlobeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes yadakshopImGlobeRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
