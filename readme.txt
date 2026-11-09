@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * روش‌های مهاجرت (خدمات ویژه) (Immigration Methods) — آیتم‌های دوطرفه با شاخص رنگی و تصویر مرکزی
 * محتوای ویژه درباره ما (Special Content) — فهرست بولت با آیکون اختصاصی به همراه دکمه‌ها
 * لوگوی متحرک (Logo Loop) — نوار متحرک (Marquee) بی‌نهایت برای لوگوها با توقف روی هاور
+* معرفی اینستاگرام (Instagram Intro) — بخش introducción با تصویر، عنوان و دکمه لینک به اینستاگرام
 
 همه ویجت‌ها در دسته «یدک شاپ» داخل پنل المنتور قرار می‌گیرند.
 
@@ -31,6 +32,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. در ویرایشگر المنتور، دسته «یدک شاپ» را در پنل ویجت‌ها پیدا کنید.
 
 == Changelog ==
+
+= 1.0.3 =
+* اصلاح ویجت «معرفی اینستاگرام»: رنگ بک‌گراند هم background و هم شکل SVG را یک‌سان تغییر می‌دهد
+* تصحیح اندازه تصویر مطابق طرح اولیه (استفاده از اندازه full و محدودیت max-width از طریق CSS)
 
 = 1.0.2 =
 * افزودن ویجت جدید «معرفی اینستاگرام» (yadakshop-instagram-intro) با فیلد تصویر، عنوان، دکمه و تنظیم رنگ بک‌گراند
