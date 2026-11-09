@@ -1,0 +1,107 @@
+/* Insta Sec */
+.SectionsInsta {
+	position: relative;
+	padding-top: 4.5em;
+}
+
+@media (max-width: 768px) {
+	.SectionsInsta {
+		padding-top: 1.5em;
+	}
+}
+
+@media (max-width: 480px) {
+	.SectionsInsta {
+		padding-top: 0.5em;
+	}
+}
+
+.BoxParentInsta {
+	position: relative;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-position: center center;
+	background-image: url("data:image/svg+xml,%3Csvg width='1280' height='500' viewBox='0 0 1280 500' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.329 20.787c.33-3.638 3.09-6.355 6.74-6.479C74.713 12.525 451.389 0 643.286 0c191.79 0 562.484 12.512 614.654 14.305 3.65.126 6.4 2.842 6.73 6.478C1267.52 52.139 1280 193.02 1280 256c0 62.687-12.36 193.226-15.29 223.237-.35 3.614-3.1 6.331-6.73 6.456C1205.97 487.482 835.127 500 643.286 500c-191.947 0-568.77-12.532-621.258-14.31-3.631-.123-6.387-2.841-6.74-6.457C12.362 449.215 0 318.685 0 256 0 193.023 12.478 52.15 15.329 20.787' fill='%23EEF8FC'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 480px) {
+	.BoxParentInsta {
+		height: 300px;
+		background-size: cover;
+		border-radius: 0 0 20px 20px;
+	}
+}
+
+.imgsInsta {
+	transform: translateY(-10%);
+	transition: all ease-in-out 0.3s;
+	max-width: 560px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.imgsInsta {
+		max-width: 320px;
+	}
+}
+
+.CustomTxtInsta {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: max-content;
+	height: max-content;
+	font-weight: 500;
+	font-family: montserrat !important;
+	letter-spacing: 0.4em;
+	z-index: -1;
+	font-size: clamp(2.125rem, 0.3013rem + 7.6786vw, 7.5rem);
+	transition: all ease-in-out 0.3s;
+	background: linear-gradient(100.37deg, #f9ce34 0%, #ee2a7b 50.02%, #6228d7 100.03%);
+	-webkit-animation: fade-in-bck 3.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s infinite;
+	animation: fade-in-bck 3.2s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s infinite;
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+.buttonCustomAramrsh.Insta {
+	position: absolute;
+	bottom: -22px;
+	max-width: 230px;
+	background-color: #fff;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.buttonCustomAramrsh.Insta {
+		bottom: -10px;
+	}
+}
+
+.buttonCustomAramrsh.Insta > p {
+	background: linear-gradient(100.37deg, #f9ce34 0%, #ee2a7b 50.02%, #6228d7 100.03%);
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+.buttonCustomAramrsh.Insta .ParentIcon {
+	background: linear-gradient(100.37deg, #f9ce34 0%, #ee2a7b 50.02%, #6228d7 100.03%) !important;
+	color: #fff !important;
+}

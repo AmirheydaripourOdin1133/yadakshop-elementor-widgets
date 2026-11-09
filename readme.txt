@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. در ویرایشگر المنتور، دسته «یدک شاپ» را در پنل ویجت‌ها پیدا کنید.
 
 == Changelog ==
+
+= 1.0.2 =
+* افزودن ویجت جدید «معرفی اینستاگرام» (yadakshop-instagram-intro) با فیلد تصویر، عنوان، دکمه و تنظیم رنگ بک‌گراند
 
 = 1.0.1 =
 * اصلاح نمایش اعلان خطای «المنتور نصب نیست» در پیشخوان
