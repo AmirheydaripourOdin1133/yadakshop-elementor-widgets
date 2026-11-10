@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,11 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. در ویرایشگر المنتور، دسته «یدک شاپ» را در پنل ویجت‌ها پیدا کنید.
 
 == Changelog ==
+
+= 1.0.4 =
+* بازسازی کامل ویجت «معرفی اینستاگرام» مطابق طرح اولیه (HTML و CSS دست‌نخورده)
+* رنگ بک‌گراند به‌صورت داینامیک روی شکل SVG اعمال می‌شود (انتخاب رنگ از طریق Color Picker)
+* حذف فاصله‌های اضافه و تصحیح اندازه تصویر مطابق طرح
 
 = 1.0.3 =
 * اصلاح ویجت «معرفی اینستاگرام»: رنگ بک‌گراند هم background و هم شکل SVG را یک‌سان تغییر می‌دهد

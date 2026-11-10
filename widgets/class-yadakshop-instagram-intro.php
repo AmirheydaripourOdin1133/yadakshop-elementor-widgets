@@ -151,13 +151,7 @@ class Yadakshop_Instagram_Intro extends Widget_Base {
 		$this->add_render_attribute( 'box', 'class', 'BoxParentInsta' );
 		?>
 		<div <?php $this->print_render_attribute_string( 'wrapper' ); ?>>
-			<div <?php $this->print_render_attribute_string( 'box' ); ?>>
-				<?php
-				// Inline SVG background (same shape as original design) with dynamic fill color.
-				?>
-				<svg class="InstaBgSvg" width="1280" height="500" viewBox="0 0 1280 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
-					<path d="M15.329 20.787c.33-3.638 3.09-6.355 6.74-6.479C74.713 12.525 451.389 0 643.286 0c191.79 0 562.484 12.512 614.654 14.305 3.65.126 6.4 2.842 6.73 6.478C1267.52 52.139 1280 193.02 1280 256c0 62.687-12.36 193.226-15.29 223.237-.35 3.614-3.1 6.331-6.73 6.456C1205.97 487.482 835.127 500 643.286 500c-191.947 0-568.77-12.532-621.258-14.31-3.631-.123-6.387-2.841-6.74-6.457C12.362 449.215 0 318.685 0 256 0 193.023 12.478 52.15 15.329 20.787" fill="<?php echo esc_attr( $bg_color ); ?>" />
-				</svg>
+			<div <?php $this->print_render_attribute_string( 'box' ); ?> style="background-image: url('data:image/svg+xml,%3Csvg width%3D%271280%27 height%3D%27500%27 viewBox%3D%270 0 1280 500%27 fill%3D%27none%27 xmlns%3D%27http://www.w3.org/2000/svg%27%3E%3Cpath d%3D%27M15.329 20.787c.33-3.638 3.09-6.355 6.74-6.479C74.713 12.525 451.389 0 643.286 0c191.79 0 562.484 12.512 614.654 14.305 3.65.126 6.4 2.842 6.73 6.478C1267.52 52.139 1280 193.02 1280 256c0 62.687-12.36 193.226-15.29 223.237-.35 3.614-3.1 6.331-6.73 6.456C1205.97 487.482 835.127 500 643.286 500c-191.947 0-568.77-12.532-621.258-14.31-3.631-.123-6.387-2.841-6.74-6.457C12.362 449.215 0 318.685 0 256 0 193.023 12.478 52.15 15.329 20.787%27 fill%3D%27<?php echo esc_attr( $bg_color ); ?>%27/%3E%3C/svg%3E');">
 				<p class="CustomTxtInsta"><?php echo esc_html( $title ); ?></p>
 				<?php
 				if ( $img_id ) {
