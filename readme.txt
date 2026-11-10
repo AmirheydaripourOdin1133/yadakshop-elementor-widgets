@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. در ویرایشگر المنتور، دسته «یدک شاپ» را در پنل ویجت‌ها پیدا کنید.
 
 == Changelog ==
+
+= 1.0.8 =
+* بازنویسی کامل JavaScript ویجت FAQ: event delegation روی document برای کارکرد درست اکاردئون در المنتور (محتواهای داینامیک) و پشتیبانی از چندین ویجت در یک صفحه
 
 = 1.0.7 =
 * اصلاح JavaScript ویجت FAQ: event delegation + DOMContentLoaded برای کارکرد درست اکاردئون (باز و بسته شدن)

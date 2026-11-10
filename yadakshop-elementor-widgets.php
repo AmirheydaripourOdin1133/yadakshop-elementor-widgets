@@ -3,7 +3,7 @@
  * Plugin Name:       یدک شاپ المنتور ویجت
  * Plugin URI:        https://github.com/AmirheydaripourOdin1133/yadakshop-elementor-widgets
  * Description:       مجموعه ویجت‌های اختصاصی المنتور برند یدک شاپ؛ شامل کاروسل خدمات، گرید خدمات، تماس با ما، روش‌های مهاجرت، محتوای ویژه و لوگوی متحرک.
- * Version:           1.0.7
+ * Version:           1.0.8
  * Requires at least: 5.9
  * Requires PHP:      7.4
  * Requires Plugins:  elementor

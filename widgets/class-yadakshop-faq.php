@@ -162,7 +162,7 @@ class Yadakshop_Faq extends Widget_Base {
 		$this->add_control(
 			'accent_color',
 			array(
-				'label'     => esc_html__( 'رنگ peringkat (آیکون و شماره)', 'yadakshop' ),
+				'label'     => esc_html__( 'رنگ accents (آیکون و شماره)', 'yadakshop' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '#000000',
 				'selectors' => array(
@@ -274,21 +274,22 @@ class Yadakshop_Faq extends Widget_Base {
 		</div>
 
 		<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			var wrapper = document.querySelector('.yadakshop-faq');
-			if (!wrapper) return;
-
-			wrapper.addEventListener('click', function(e) {
+		(function() {
+			var accordionClickHandler = function(e) {
 				var item = e.target.closest('.yadakshop-faqs-question');
 				if (!item) return;
+
+				var wrapper = item.closest('.yadakshop-faq');
+				if (!wrapper) return;
 
 				var parent = item.closest('.yadakshop-faqs-item');
 				var isActive = parent.classList.contains('active');
 
-				// Close all other open items in same widget
 				wrapper.querySelectorAll('.yadakshop-faqs-item.active').forEach(function(el) {
 					if (el !== parent) {
 						el.classList.remove('active');
+						var btn = el.querySelector('.yadakshop-faqs-question');
+						if (btn) btn.setAttribute('aria-expanded', 'false');
 					}
 				});
 
@@ -299,10 +300,9 @@ class Yadakshop_Faq extends Widget_Base {
 					parent.classList.add('active');
 					item.setAttribute('aria-expanded', 'true');
 				}
-			});
+			};
 
-			// Accessibility keyboard support
-			wrapper.addEventListener('keydown', function(e) {
+			var accordionKeyHandler = function(e) {
 				if (e.key === 'Enter' || e.key === ' ') {
 					var item = e.target.closest('.yadakshop-faqs-question');
 					if (item) {
@@ -310,8 +310,11 @@ class Yadakshop_Faq extends Widget_Base {
 						item.click();
 					}
 				}
-			});
-		});
+			};
+
+			document.addEventListener('click', accordionClickHandler);
+			document.addEventListener('keydown', accordionKeyHandler);
+		})();
 		</script>
 		<?php
 	}
