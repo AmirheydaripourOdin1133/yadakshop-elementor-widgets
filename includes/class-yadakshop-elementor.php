@@ -103,6 +103,7 @@ final class Yadakshop_Elementor {
 			'class-yadakshop-services-grid.php'         => 'Yadakshop_Services_Grid',
 			'class-yadakshop-logo-loop.php'             => 'Yadakshop_Logo_Loop',
 			'class-yadakshop-instagram-intro.php'       => 'Yadakshop_Instagram_Intro',
+			'class-yadakshop-faq.php'                   => 'Yadakshop_Faq',
 		);
 
 		foreach ( $widgets as $filename => $class_name ) {
@@ -183,6 +184,13 @@ final class Yadakshop_Elementor {
 		wp_register_style(
 			'yadakshop-instagram-intro',
 			YADAKSHOP_PLUGIN_URL . 'assets/css/yadakshop-instagram-intro.css',
+			array(),
+			YADAKSHOP_VERSION
+		);
+
+		wp_register_style(
+			'yadakshop-faq',
+			YADAKSHOP_PLUGIN_URL . 'assets/css/yadakshop-faq.css',
 			array(),
 			YADAKSHOP_VERSION
 		);

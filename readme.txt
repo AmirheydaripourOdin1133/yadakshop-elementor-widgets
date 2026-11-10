@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,12 +33,18 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Changelog ==
 
+= 1.0.6 =
+* افزودن ویجت جدید «سئوالات متداول (FAQ)» (yadakshop-faq) با استفاده از رپیکتر المنتور
+* تولید اسکیما گوگل (FAQPage) به صورت خودکار برای سئو
+* تنظیمات استایل: رنگ بک‌گراند، رنگ متن، رنگ accents (آیکون و شماره)
+* behaves like accordion با باز و بسته شدن ساده
+* سازگاری با responsive (רסponsiv)
+
 = 1.0.5 =
 * تصحیح اندازه تصویر (max-width 400px، کوچک‌تر)
 * افزودن انیمیشن نرم شنا (floating) برای تصویر
 * کاهش فاصله بین تصویر و دکمه
-* بازطراحی دکمه: تمیزتر،ボール-radius، سایه، و هاور انیمیشن
-*修ح散 후اض باری و سازگاری بیشتر
+* بازطراحی دکمه: تمیزتر، border-radius، سایه، و هاور انیمیشن
 
 = 1.0.4 =
 * بازسازی کامل ویجت «معرفی اینستاگرام» مطابق طرح اولیه (HTML و CSS دست‌نخورده)

@@ -1,0 +1,173 @@
+/* FAQ Widget - Yadakshop */
+.yadakshop-faq {
+	position: relative;
+}
+
+.yadakshop-faqs-content {
+	max-width: 1100px;
+	margin: auto;
+}
+
+.yadakshop-headings-section {
+	padding: 30px 0;
+}
+
+.yadakshop-headings-section > .yadakshop-title-cus-theme {
+	color: inherit;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	position: relative;
+	padding-right: 12px;
+	margin: 25px 0;
+}
+
+.yadakshop-headings-section > .yadakshop-title-cus-theme::before {
+	position: absolute;
+	content: "";
+	width: 2px;
+	height: 43px;
+	background-color: #ee2a7b;
+	right: 0;
+	top: 0;
+}
+
+.yadakshop-headings-section > .yadakshop-subs-title-cus-theme {
+	color: inherit;
+	font-size: 14px;
+	line-height: 2.3em;
+	margin: 0;
+}
+
+.yadakshop-faqs-item {
+	margin-bottom: 15px;
+	padding: 0 20px;
+	transition: all linear 0.2s;
+	background-color: #f9f9f9;
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.yadakshop-faqs-item .yadakshop-faqs-question {
+	color: #2c2e2f;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all linear 0.2s;
+	height: 80px;
+}
+
+.yadakshop-faqs-item .yadakshop-parent-svgs {
+	margin-right: auto;
+	transition: all ease-in-out 0.3s;
+	position: absolute;
+	bottom: -5px;
+	width: 94px;
+	background: #fff;
+	mask-size: cover;
+	left: 3em;
+	mask-image: url("data:image/svg+xml,%3Csvg width='94' height='28' viewBox='0 0 94 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.341 6.731A7.79 7.79 0 0 1 20.061 0h53.878a7.79 7.79 0 0 1 7.72 6.731l1.64 11.939A10.8 10.8 0 0 0 94 28H0a10.8 10.8 0 0 0 10.7-9.33z' fill='%23fff'/%3E%3C/svg%3E");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.yadakshop-faqs-item .yadakshop-parent-svgs svg {
+	transition: all ease-in-out 0.3s;
+	stroke: #000;
+}
+
+.yadakshop-faqs-item .yadakshop-faq-num {
+	color: #2c2e2f;
+	transition: all ease-in 0.2s;
+	display: inline-flex;
+	font-size: 14.5px;
+	border-radius: 0;
+	background: #fff;
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg width='94' height='28' viewBox='0 0 94 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.341 21.269A7.79 7.79 0 0 0 20.061 28h53.878a7.79 7.79 0 0 0 7.72-6.731l1.64-11.939A10.8 10.8 0 0 1 94 0H0a10.8 10.8 0 0 1 10.7 9.33z' fill='%23fff'/%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml,%3Csvg width='94' height='28' viewBox='0 0 94 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.341 21.269A7.79 7.79 0 0 0 20.061 28h53.878a7.79 7.79 0 0 0 7.72-6.731l1.64-11.939A10.8 10.8 0 0 1 94 0H0a10.8 10.8 0 0 1 10.7 9.33z' fill='%23fff'/%3E%3C/svg%3E");
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	font-family: "Montserrat" !important;
+	width: 94px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	left: 3em;
+	position: absolute;
+	top: 0;
+}
+
+.yadakshop-faqs-item .yadakshop-faqs-answer {
+	font-size: 14px;
+	line-height: 2.5em;
+	margin-top: 0;
+	padding: 0;
+	padding-bottom: 3.2em;
+	font-weight: 500;
+	text-align: justify;
+	color: #2c2e2f;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+.yadakshop-faqs-item.active .yadakshop-faqs-answer {
+	max-height: 1000px;
+	padding-bottom: 20px;
+}
+
+.yadakshop-faqs-item.active .yadakshop-faqs-question .yadakshop-parent-svgs > svg {
+	transform: rotate(180deg);
+}
+
+.yadakshop-faqs-item.active .yadakshop-faqs-question {
+	color: #ee2a7b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.yadakshop-headings-section > .yadakshop-title-cus-theme {
+		font-size: 14.5px;
+	}
+
+	.yadakshop-headings-section > .yadakshop-subs-title-cus-theme {
+		font-size: 13px;
+	}
+
+	.yadakshop-faqs-item .yadakshop-faqs-question {
+		font-size: 13.5px;
+		height: 50px;
+	}
+
+	.yadakshop-faqs-item .yadakshop-parent-svgs {
+		left: 1.6em;
+	}
+
+	.yadakshop-faqs-item .yadakshop-faq-num {
+		left: 1.5em;
+	}
+
+	.yadakshop-faqs-item .yadakshop-faqs-answer {
+		font-size: 12.5px;
+		padding: 17px 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.yadakshop-faqs-item .yadakshop-faqs-question {
+		font-size: 12.5px;
+		line-height: 25px;
+	}
+
+	.yadakshop-faqs-item .yadakshop-faq-num {
+		display: none;
+	}
+}
