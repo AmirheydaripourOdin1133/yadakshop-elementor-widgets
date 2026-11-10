@@ -238,38 +238,38 @@ class Yadakshop_Faq extends Widget_Base {
 			</div>
 
 			<?php if ( is_array( $faqs ) && $faqs ) : ?>
-				<script type="application/ld+json">
-				{
-					"@context": "https://schema.org",
-					"@type": "FAQPage",
-					"mainEntity": [
-						<?php
-						$faq_number = 0;
-						$first = true;
-						foreach ( $faqs as $faq ) :
-							if ( ! is_array( $faq ) ) {
-								continue;
-							}
-							++$faq_number;
-							if ( ! $first ) {
-								echo ',';
-							}
-							$first = false;
-							$q = esc_html( $faq['question'] ?? '' );
-							$a = esc_html( $faq['answer'] ?? '' );
-							?>
-							{
-								"@type": "Question",
-								"name": "<?php echo $q; ?>",
-								"acceptedAnswer": {
-									"@type": "Answer",
-									"text": "<?php echo $a; ?>"
-								}
-							}
-						<?php endforeach; ?>
-					]
-				}
-				</script>
+				<?php
+				$schema_items = array();
+				foreach ( $faqs as $faq ) :
+					if ( ! is_array( $faq ) ) {
+						continue;
+					}
+					$q = ! empty( $faq['question'] ) ? strip_tags( $faq['question'] ) : '';
+					$a = ! empty( $faq['answer'] )   ? strip_tags( $faq['answer'] )   : '';
+					if ( empty( $q ) && empty( $a ) ) {
+						continue;
+					}
+					$schema_items[] = array(
+						'@type'             => 'Question',
+						'name'              => $q,
+						'acceptedAnswer'    => array(
+							'@type' => 'Answer',
+							'text'  => $a,
+						),
+					);
+				endforeach;
+				if ( ! empty( $schema_items ) ) :
+					?>
+					<script type="application/ld+json">
+					{
+						"@context": "https://schema.org",
+						"@type": "FAQPage",
+						"mainEntity": <?php echo wp_json_encode( $schema_items, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ); ?>
+					}
+					</script>
+					<?php
+				endif;
+				?>
 			<?php endif; ?>
 		</div>
 

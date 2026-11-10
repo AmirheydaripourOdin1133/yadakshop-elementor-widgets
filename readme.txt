@@ -5,7 +5,7 @@ Requires at least: 5.9
 Requires PHP: 7.4
 Requires Plugins: elementor
 Tested up to: 6.7
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,13 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 3. در ویرایشگر المنتور، دسته «یدک شاپ» را در پنل ویجت‌ها پیدا کنید.
 
 == Changelog ==
+
+= 1.1.0 =
+* اصلاح اسکیمای گوگل (FAQPage): استفاده از wp_json_encode و strip_tags برای تولید معتبر JSON-LD (ارسالی‌های گوگل ریشリカബل شناسایی شود)
+* بازنویسی کامل JavaScript اکاردئون با jQuery + slideUp/slideDown (برابر کد اصلی کاربر)
+* event delegation روی document برای کارکرد درست در محتوای داینامیک المنتور
+* پشتیبانی از چندین ویجت FAQ در یک صفحه (هر یک مستقل)
+* Keyboard accessibility (Enter/Space)
 
 = 1.0.9 =
 * بازنویسی کامل JavaScript اکاردئون با jQuery + slideUp/slideDown (برابر کد اصلی کاربر)
