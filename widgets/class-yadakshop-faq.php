@@ -274,47 +274,43 @@ class Yadakshop_Faq extends Widget_Base {
 		</div>
 
 		<script>
-		(function() {
-			var accordionClickHandler = function(e) {
-				var item = e.target.closest('.yadakshop-faqs-question');
-				if (!item) return;
+		jQuery(document).ready(function($) {
+			// Accordion click handler with event delegation (works with Elementor dynamic content)
+			$(document).on('click', '.yadakshop-faqs-question', function(e) {
+				e.preventDefault();
 
-				var wrapper = item.closest('.yadakshop-faq');
-				if (!wrapper) return;
+				var $this = $(this);
+				var $parent = $this.parent();
 
-				var parent = item.closest('.yadakshop-faqs-item');
-				var isActive = parent.classList.contains('active');
-
-				wrapper.querySelectorAll('.yadakshop-faqs-item.active').forEach(function(el) {
-					if (el !== parent) {
-						el.classList.remove('active');
-						var btn = el.querySelector('.yadakshop-faqs-question');
-						if (btn) btn.setAttribute('aria-expanded', 'false');
-					}
-				});
-
-				if (isActive) {
-					parent.classList.remove('active');
-					item.setAttribute('aria-expanded', 'false');
+				if ($parent.hasClass('active')) {
+					$parent.removeClass('active');
+					$this.next('.yadakshop-faqs-answer').stop(true, true).slideUp(350);
+					$this.attr('aria-expanded', 'false');
 				} else {
-					parent.classList.add('active');
-					item.setAttribute('aria-expanded', 'true');
-				}
-			};
+					// Close all others in same widget
+					$this.closest('.yadakshop-faq').find('.yadakshop-faqs-item.active').each(function() {
+						var $otherItem = $(this);
+						var $otherBtn = $otherItem.find('.yadakshop-faqs-question');
+						$otherItem.removeClass('active');
+						$otherItem.find('.yadakshop-faqs-answer').stop(true, true).slideUp(350);
+						$otherBtn.attr('aria-expanded', 'false');
+					});
 
-			var accordionKeyHandler = function(e) {
+					// Open current
+					$parent.addClass('active');
+					$this.next('.yadakshop-faqs-answer').stop(true, true).slideDown(350);
+					$this.attr('aria-expanded', 'true');
+				}
+			});
+
+			// Keyboard accessibility
+			$(document).on('keydown', '.yadakshop-faqs-question', function(e) {
 				if (e.key === 'Enter' || e.key === ' ') {
-					var item = e.target.closest('.yadakshop-faqs-question');
-					if (item) {
-						e.preventDefault();
-						item.click();
-					}
+					e.preventDefault();
+					$(this).click();
 				}
-			};
-
-			document.addEventListener('click', accordionClickHandler);
-			document.addEventListener('keydown', accordionKeyHandler);
-		})();
+			});
+		});
 		</script>
 		<?php
 	}
