@@ -274,36 +274,44 @@ class Yadakshop_Faq extends Widget_Base {
 		</div>
 
 		<script>
-		(function() {
-			var items = document.querySelectorAll('.yadakshop-faqs-question');
-			items.forEach(function(item) {
-				item.addEventListener('click', function() {
-					var parent = item.parentElement;
-					var isActive = parent.classList.contains('active');
-					// Close all others in same widget
-					var wrapper = item.closest('.yadakshop-faq');
-					if (wrapper) {
-						wrapper.querySelectorAll('.yadakshop-faqs-item.active').forEach(function(el) {
-							if (el !== parent) {
-								el.classList.remove('active');
-							}
-						});
-					}
-					if (isActive) {
-						parent.classList.remove('active');
-					} else {
-						parent.classList.add('active');
+		document.addEventListener('DOMContentLoaded', function() {
+			var wrapper = document.querySelector('.yadakshop-faq');
+			if (!wrapper) return;
+
+			wrapper.addEventListener('click', function(e) {
+				var item = e.target.closest('.yadakshop-faqs-question');
+				if (!item) return;
+
+				var parent = item.closest('.yadakshop-faqs-item');
+				var isActive = parent.classList.contains('active');
+
+				// Close all other open items in same widget
+				wrapper.querySelectorAll('.yadakshop-faqs-item.active').forEach(function(el) {
+					if (el !== parent) {
+						el.classList.remove('active');
 					}
 				});
-				// Accessibility
-				item.addEventListener('keydown', function(e) {
-					if (e.key === 'Enter' || e.key === ' ') {
+
+				if (isActive) {
+					parent.classList.remove('active');
+					item.setAttribute('aria-expanded', 'false');
+				} else {
+					parent.classList.add('active');
+					item.setAttribute('aria-expanded', 'true');
+				}
+			});
+
+			// Accessibility keyboard support
+			wrapper.addEventListener('keydown', function(e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					var item = e.target.closest('.yadakshop-faqs-question');
+					if (item) {
 						e.preventDefault();
 						item.click();
 					}
-				});
+				}
 			});
-		})();
+		});
 		</script>
 		<?php
 	}
