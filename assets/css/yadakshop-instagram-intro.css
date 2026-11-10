@@ -26,15 +26,31 @@
 	flex-direction: column;
 	align-items: center;
 	background-position: center center;
+	padding-top: 0;
+	padding-bottom: 40px; /* space for button */
+}
+
+/* Floating animation for image */
+@keyframes yadakshop-insta-float {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .imgsInsta {
 	transform: translateY(-10%);
-	transition: all ease-in-out 0.3s;
-	max-width: 560px;
-	text-align: center;
-	margin: 0 auto;
+	max-width: 400px; /* smaller image */
 	width: 100%;
+	height: auto;
+	margin: 0 auto 20px auto; /* space below image */
+	display: block;
+	animation: yadakshop-insta-float 6s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -70,29 +86,62 @@
 
 .buttonCustomAramrsh.Insta {
 	position: absolute;
-	bottom: -22px;
+	bottom: 20px; /* closer to image */
 	max-width: 230px;
 	background-color: #fff;
 	margin: 0 auto;
 	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 14px 24px;
+	box-sizing: border-box;
+	text-decoration: none;
+	border-radius: 50px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	transition: all ease-in-out 0.3s;
 }
 
 @media (max-width: 768px) {
 	.buttonCustomAramrsh.Insta {
-		bottom: -10px;
+		bottom: 10px;
 	}
 }
 
+.buttonCustomAramrsh.Insta:hover {
+	transform: translateX(-50%) scale(1.02);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 .buttonCustomAramrsh.Insta > p {
+	margin: 0;
 	background: linear-gradient(100.37deg, #f9ce34 0%, #ee2a7b 50.02%, #6228d7 100.03%);
 	background-clip: border-box;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	color: transparent;
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 }
 
 .buttonCustomAramrsh.Insta .ParentIcon {
 	background: linear-gradient(100.37deg, #f9ce34 0%, #ee2a7b 50.02%, #6228d7 100.03%) !important;
 	color: #fff !important;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}
+
+.buttonCustomAramrsh.Insta .ParentIcon svg {
+	width: 18px;
+	height: 18px;
 }
