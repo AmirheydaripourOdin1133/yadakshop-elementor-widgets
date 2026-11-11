@@ -1,0 +1,162 @@
+/* WooCommerce Category FAQ - Yadakshop */
+.yadakshop-cat-faq-section {
+	margin-top: 40px;
+	padding: 30px 0;
+	border-top: 1px solid #eaeaea;
+}
+
+.yadakshop-cat-faq-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 25px;
+	color: #2c2e2f;
+	position: relative;
+	padding-right: 12px;
+}
+
+.yadakshop-cat-faq-title::before {
+	position: absolute;
+	content: "";
+	width: 2px;
+	height: 43px;
+	background-color: #ee2a7b;
+	right: 0;
+	top: 0;
+}
+
+.yadakshop-cat-faqs {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.yadakshop-cat-faq-item {
+	margin-bottom: 15px;
+	padding: 0 20px;
+	transition: all linear 0.2s;
+	background-color: #f9f9f9;
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.yadakshop-cat-faq-question {
+	font-size: 15px;
+	color: #2c2e2f;
+	font-weight: 600;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all linear 0.2s;
+	height: 70px;
+	position: relative;
+}
+
+.yadakshop-cat-faq-num {
+	color: #2c2e2f;
+	transition: all ease-in 0.2s;
+	display: inline-flex;
+	font-size: 14.5px;
+	border-radius: 0;
+	background: #fff;
+	font-family: "Montserrat", sans-serif !important;
+	width: 94px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.yadakshop-cat-faq-icon {
+	margin-right: auto;
+	transition: all ease-in-out 0.3s;
+}
+
+.yadakshop-cat-faq-icon svg {
+	transition: all ease-in-out 0.3s;
+	stroke: #000;
+}
+
+.yadakshop-cat-faq-answer {
+	font-size: 14px;
+	line-height: 2.5em;
+	margin-top: 0;
+	padding: 0 20px 20px 20px;
+	font-weight: 500;
+	text-align: justify;
+	color: #2c2e2f;
+	display: none;
+}
+
+.yadakshop-cat-faq-item.active .yadakshop-cat-faq-answer {
+	display: block;
+}
+
+.yadakshop-cat-faq-item.active .yadakshop-cat-faq-question {
+	color: #ee2a7b;
+}
+
+.yadakshop-cat-faq-item.active .yadakshop-cat-faq-icon svg {
+	transform: rotate(180deg);
+}
+
+.yadakshop-cat-faq-item.active .yadakshop-cat-faq-question .yadakshop-cat-faq-num {
+	color: #ee2a7b;
+}
+
+/* Meta box styling */
+.yadakshop-cat-faq-box th {
+	vertical-align: top;
+}
+
+.yadakshop-cat-faq-table {
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+.yadakshop-cat-faq-table th {
+	text-align: left;
+	padding: 8px;
+	background: #f1f1f1;
+}
+
+.yadakshop-cat-faq-table td {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+.yadakshop-remove-row {
+	color: #dc3232;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#yadakshop-add-cat-faq {
+	margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.yadakshop-cat-faq-title {
+		font-size: 20px;
+	}
+
+	.yadakshop-cat-faq-question {
+		font-size: 14px;
+		height: 60px;
+	}
+
+	.yadakshop-cat-faq-num {
+		font-size: 13px;
+		width: 80px;
+		height: 24px;
+	}
+
+	.yadakshop-cat-faq-answer {
+		font-size: 13px;
+		padding: 0 15px 15px 15px;
+	}
+}

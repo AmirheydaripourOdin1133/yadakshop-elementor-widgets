@@ -99,7 +99,6 @@ final class Yadakshop_Elementor {
 			'class-yadakshop-services-carousel.php'     => 'Yadakshop_Services_Carousel',
 			'class-yadakshop-special-content.php'       => 'Yadakshop_Special_Content',
 			'class-yadakshop-contact-us.php'            => 'Yadakshop_Contact_Us',
-			'class-yadakshop-immigration-methods.php'   => 'Yadakshop_Immigration_Methods',
 			'class-yadakshop-services-grid.php'         => 'Yadakshop_Services_Grid',
 			'class-yadakshop-logo-loop.php'             => 'Yadakshop_Logo_Loop',
 			'class-yadakshop-instagram-intro.php'       => 'Yadakshop_Instagram_Intro',
@@ -148,13 +147,6 @@ final class Yadakshop_Elementor {
 		wp_register_style(
 			'yadakshop-contact-us',
 			YADAKSHOP_PLUGIN_URL . 'assets/css/contact-us.css',
-			array(),
-			YADAKSHOP_VERSION
-		);
-
-		wp_register_style(
-			'yadakshop-immigration-methods',
-			YADAKSHOP_PLUGIN_URL . 'assets/css/yadakshop-immigration-methods.css',
 			array(),
 			YADAKSHOP_VERSION
 		);

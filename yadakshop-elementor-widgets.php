@@ -2,11 +2,11 @@
 /**
  * Plugin Name:       یدک شاپ المنتور ویجت
  * Plugin URI:        https://github.com/AmirheydaripourOdin1133/yadakshop-elementor-widgets
- * Description:       مجموعه ویجت‌های اختصاصی المنتور برند یدک شاپ؛ شامل کاروسل خدمات، گرید خدمات، تماس با ما، روش‌های مهاجرت، محتوای ویژه و لوگوی متحرک.
- * Version:           1.1.0
+ * Description:       مجموعه ویجت‌های اختصاصی المنتور برند یدک شاپ؛ شامل کاروسل خدمات، گرید خدمات، تماس با ما، محتوای ویژه، لوگو متحرک، سئوالات متداول و پرسش و پاسخ دسته‌بندی محصولات ووکامرس.
+ * Version:           1.2.0
  * Requires at least: 5.9
  * Requires PHP:      7.4
- * Requires Plugins:  elementor
+ * Requires Plugins:  elementor, woocommerce
  * Author:            Amir Heydaripour
  * Author URI:        https://wp-amir.ir
  * License:           GPL-2.0-or-later
@@ -15,11 +15,13 @@
  * Domain Path:       /languages
  * Elementor tested up to: 3.30.0
  * Elementor requires at least: 3.10.0
+ * WC tested up to:   8.0.0
+ * WC requires at least: 5.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'YADAKSHOP_VERSION', '1.0.1' );
+define( 'YADAKSHOP_VERSION', '1.2.0' );
 define( 'YADAKSHOP_PLUGIN_FILE', __FILE__ );
 define( 'YADAKSHOP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'YADAKSHOP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -65,3 +67,14 @@ function yadakshop_elementor_widgets_missing_elementor() {
 	);
 }
 add_action( 'admin_notices', 'yadakshop_elementor_widgets_missing_elementor' );
+
+/**
+ * Load WooCommerce Category FAQ integration.
+ *
+ * @return void
+ */
+function yadakshop_woocommerce_category_faq_load() {
+	require_once YADAKSHOP_PLUGIN_DIR . 'includes/class-yadakshop-woocommerce-category-faq.php';
+	new Yadakshop_Woocommerce_Category_Faq();
+}
+yadakshop_woocommerce_category_faq_load();
