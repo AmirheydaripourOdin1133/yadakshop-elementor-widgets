@@ -3,7 +3,7 @@
  * Plugin Name:       یدک شاپ المنتور ویجت
  * Plugin URI:        https://github.com/AmirheydaripourOdin1133/yadakshop-elementor-widgets
  * Description:       مجموعه ویجت‌های اختصاصی المنتور برند یدک شاپ؛ شامل کاروسل خدمات، گرید خدمات، تماس با ما، محتوای ویژه، لوگو متحرک، سئوالات متداول و پرسش و پاسخ دسته‌بندی محصولات ووکامرس.
- * Version:           1.2.0
+ * Version:           1.3.0
  * Requires at least: 5.9
  * Requires PHP:      7.4
  * Requires Plugins:  elementor, woocommerce
@@ -21,7 +21,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'YADAKSHOP_VERSION', '1.2.0' );
+define( 'YADAKSHOP_VERSION', '1.3.0' );
 define( 'YADAKSHOP_PLUGIN_FILE', __FILE__ );
 define( 'YADAKSHOP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'YADAKSHOP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -74,7 +74,10 @@ add_action( 'admin_notices', 'yadakshop_elementor_widgets_missing_elementor' );
  * @return void
  */
 function yadakshop_woocommerce_category_faq_load() {
+	if ( ! class_exists( 'WooCommerce' ) && ! taxonomy_exists( 'product_cat' ) ) {
+		return;
+	}
 	require_once YADAKSHOP_PLUGIN_DIR . 'includes/class-yadakshop-woocommerce-category-faq.php';
 	new Yadakshop_Woocommerce_Category_Faq();
 }
-yadakshop_woocommerce_category_faq_load();
+add_action( 'plugins_loaded', 'yadakshop_woocommerce_category_faq_load', 20 );
